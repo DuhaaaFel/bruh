@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>whatever</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <style>
+    * {
+  margin:  0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+.container {
+  background-color: #ccc; 
+  max-width: 100vh;
+  height: 100vh;
+}
+
+.container .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.first img {
+  width: 250px;
+  padding: 50px;
+}
+
+.text {
+  padding: 15px;
+}
+
+.button-field {
+  display: none;
+}
+
+.yes {
+  padding: 15px;
+  background-color: #00FF0F;
+  border-radius: 10px; 
+  text-decoration: none; 
+  color: #000;
+}
+
+.no {
+  padding: 15px;
+  background-color: #EB0000; 
+  border-radius: 10px; 
+  text-decoration: none; 
+  color:#000;
+}
+
+.yes:hover {
+  padding: 15px;
+  background-color: #BFEB00; 
+  color: white;
+}
+
+.no:hover {
+  padding: 15px;
+  background-color: #000000;
+  color: white;
+}
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+  <div class="container">
+    <div class="content">
+      <div class="first">
+        <img src="img/what.gif" class="image">
+        <h1 class="text">Hellooo!</h1>
+          <div class="button-field">
+          <a href="#yes" class="yes">yes</a>
+          <a href="#no" class="no">no</a>
+        </div>
+      </div>
+      <a href="#next" class="next">lanjut>></a>
+    </div>
+  </div>
+  
+  
+  <!-- Project -->
+  <script src="main.js"></script>
+  <<script>
+  
+const image = document.querySelector('.image');
+const text = document.querySelector('.text');
+const buttonField = document.querySelector('.button-field');
+const buttonYes = document.querySelector('.yes');
+const buttonNo = document.querySelector('.no');
+const cta = document.querySelector('.next');
+
+cta.addEventListener ('click', function () {
+  image.src = 'img/cat-a.jpg';
+  text.innerHTML = 'I have a nice question for u';
+  cta.addEventListener('click', function () {
+    image.src = 'img/cat-k.jpg';
+    text.innerHTML= 'Will u be my valentine?';
+    buttonField.style.display = 'inline-block';
+    cta.style.display = 'none';
+  });
+});
+
+buttonYes.addEventListener ('click', function () {
+  image.src = 'img/cat-n.jpg';
+  text.innerHTML = 'Yayyy!!! ';
+  cta.style.display = 'inline-block';
+  buttonField.style.display = 'none';
+  cta.addEventListener ('click', function () {
+    image.src = 'img/kiss.gif';
+    text.innerHTML= 'Thankyouuu so much! ';
+    cta.style.display = 'inline-block';
+    buttonField.style.display = 'none';
+    cta.addEventListener ('click', function () {
+      image.src = 'img/cat-cat-kiss.png';
+      text.innerHTML = 'lopyu mwehehe ❤❤';
+      buttonField.style.display = 'none';
+    });
+  });
+});
+
+  buttonNo.addEventListener ('click', function () {
+   image.src = 'img/cat-e.jpg';
+   text.innerHTML= 'seriusan gamau? ';
+   text.style.paddingBottom = '35px';
+   buttonNo.innerHTML = 'Gak';
+   buttonYes.innerHTML = 'Mauu';
+   buttonYes.style.padding = '22px'; 
+   buttonNo.style.padding = '20px';
+   buttonNo.addEventListener('click', function () {
+     image.src = 'img/cat-h.jpg';
+     text.innerHTML = 'jadi gamau nih? ';
+     text.style.paddingBottom = '35px';
+     buttonNo.innerHTML = 'iya';
+     buttonYes.innerHTML = 'eh gajadi, mau deng';
+     buttonNo.style.padding = '18px';
+     buttonNo.addEventListener ('click', function () {
+       image.src = 'img/cat-g.jpg';
+       text.innerHTML = 'yang bener aje, rugi dong';
+       text.style.paddingBottom = '35px';
+       buttonNo.innerHTML = 'ttp gamau'; 
+       buttonYes.innerHTML = 'ywdh mau';
+       buttonNo.style.padding = '16px';
+       buttonNo.addEventListener('click', function () {
+         image.src = 'img/cat-d.jpg';
+         text.innerHTML = 'yakin? nangis nih gw';
+         text.style.paddingBottom = '35px';
+         buttonNo.innerHTML = 'ga peduli';
+         buttonYes.innerHTML = 'iyaa mauu kok';
+         buttonNo.style.padding = '14px';
+         buttonNo.addEventListener('click', function () {
+           image.src = 'img/cat-l.png';
+           text.innerHTML = ':(';
+           text.style.padding = '35px';
+           cta.style.display = 'inline-block';
+           buttonField.style.display = 'none';
+           cta.addEventListener('click', function () {
+             image.src = 'img/cat-f.jpg';
+             text.innerHTML = 'last nih, lu gamau? '
+             text.style.paddingBottom = '35px';
+             cta.style.display = 'none'
+             buttonNo.innerHTML = 'gakk!! ';
+             buttonYes.innerHTML = 'yaudah iya, mau';
+             buttonNo.style.padding = '12px';
+             buttonNo.addEventListener ('click', function () {
+               image.src = 'img/cat-angry1.jpg';
+               text.innerHTML = 'oke kalo gt';
+               buttonField.style.display = 'none';
+               cta.innerHTML = 'yaudah';
+               cta.addEventListener('click', function () {
+                 image.src = 'img/cat-angry2.jpg';
+                 text.innerHTML = 'kita musuhan😡 ';
+                 cta.style.display = 'none';
+                 buttonField.style.display = 'none';
+               });
+             });
+           });
+         });
+       });
+     });
+   });
+ });
+  
+  </script>
+</body>
+</html>
